@@ -121,6 +121,8 @@ function greenhouse_scripts() {
 
 	wp_enqueue_script( 'script.js', get_template_directory_uri() . '/js/script.js', array('jquery') );
 
+	wp_enqueue_style( 'icons', get_template_directory_uri() . '/foundation-icons/foundation-icons.css');
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

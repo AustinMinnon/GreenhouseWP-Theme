@@ -20,44 +20,59 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php echo get_bloginfo( 'name'); ?></a>
-			</div>
-
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<?php wp_nav_menu( array( 'items_wrap' => '%3$s' , 'sort_column' => 'menu_order',  'menu' => 'MainMenu', 'container' => '' , 'menu_class' => 'nav navbar-nav' ,'theme_location' => 'primary-menu', ) ); ?>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seasons <span class="caret"></span></a>
-
-
-						<?php wp_nav_menu( array( 'sort_column' => 'menu_order',  'menu' => 'SecondaryMenu', 'container_id' => 'dropdown' , 'container_class' => 'dropdown-menu dropdown-menu-left', 'menu_class' => 'secondary-ul' ,'theme_location' => 'primary-menu', ) ); ?>
-
-					</li>
-					</ul>
-				<ul class="nav navbar-nav navbar-right">
-
-				</ul>
-			</div>
+		<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="#">
+						Start Bootstrap
+					</a>
+				</li>
+				<li>
+					<a href="#">Dashboard</a>
+				</li>
+				<li>
+					<a href="#">Shortcuts</a>
+				</li>
+				<li>
+					<a href="#">Overview</a>
+				</li>
+				<li>
+					<a href="#">Events</a>
+				</li>
+				<li>
+					<a href="#">About</a>
+				</li>
+				<li>
+					<a href="#">Services</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+			</ul>
 		</div>
-	</nav>
+			<!-- /#sidebar-wrapper -->
+			<!-- Page Content Wrapper -->
+		<div id="page-content-wrapper">
+		            <div class="container-fluid">
+		                <div class="row">
+		                    <div class="col-lg-12">
+		                        <h1>Simple Sidebar</h1>
+		                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+		                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+		                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+		                    </div>
+		                </div>
+		            </div>
 
 
+	<div id="page" class="site">
 
+		<!-- Header Image  -->
+		<!-- <section>
+			<img class="header-image" src="<?php header_image(); ?>" />
+		</section> -->
 
-	<!-- Header Image  -->
-	<section>
-		<img class="featured__Image" src="<?php header_image(); ?>" />
-	</section>
-
-	<div id="content" class="site-content">
+		<div id="content" class="site-content">
